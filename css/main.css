@@ -18,6 +18,24 @@ body > header {
     box-shadow: 0px 0px 5px 2px #1b1b1b22;
 }
 
+.bookshelf-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    height: 3vh;
+    width: 30%;
+    padding: 1vh 0 1vh 3vw;
+}
+
+.bookshelf-buttons select, .bookshelf-buttons label {
+    font-size: 20px;
+}
+
+.bookshelf-buttons img {
+    height: 3vh;
+}
+
 .form-container {
     visibility: hidden;
 
