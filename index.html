@@ -21,32 +21,34 @@
     </div>
     <div class="bookshelf">
     </div>
-    <form>
-        <header class="form-header">Add a New Book</header>
-        <div class="form-option">
-            <label for="author">Author:</label>
-            <input type="text" id="author" name="author">
-        </div>
-        <div class="form-option">
-            <label for="Pages">Pages:</label>
-            <input type="text" id="pages" name="pages">
-        </div>
-        <div class="form-option">
-            <label for="genre">Genre:</label>
-            <select name="genre" id="genre">
-                <option value="action" id="action">Action</option>
-                <option value="comedy" id="comedy">Comedy</option>
-                <option value="detective" id="detective">Detective</option>
-                <option value="romance" id="romance">Romance</option>
-                <option value="thriller" id="thriller">Thriller</option>
-                <option value="horror" id="horror">Horror</option>
-            </select>
-        </div>
-        <div class="form-option">
-            <label for="status">Completed:</label>
-            <input type="checkbox" id="status">
-        </div>
-        <input type="submit" id="submit">
-    </form>
+    <div class="form-container">
+        <form>
+            <header class="form-header">Add a New Book</header>
+            <div class="form-option">
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author">
+            </div>
+            <div class="form-option">
+                <label for="Pages">Pages:</label>
+                <input type="text" id="pages" name="pages">
+            </div>
+            <div class="form-option">
+                <label for="genre">Genre:</label>
+                <select name="genre" id="genre">
+                    <option value="action" id="action">Action</option>
+                    <option value="comedy" id="comedy">Comedy</option>
+                    <option value="detective" id="detective">Detective</option>
+                    <option value="romance" id="romance">Romance</option>
+                    <option value="thriller" id="thriller">Thriller</option>
+                    <option value="horror" id="horror">Horror</option>
+                </select>
+            </div>
+            <div class="form-option">
+                <label for="status">Completed:</label>
+                <input type="checkbox" id="status">
+            </div>
+            <input type="submit" id="submit" value="Add">
+        </form>
+    </div>
 </body>
 </html>
