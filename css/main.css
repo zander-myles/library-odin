@@ -21,6 +21,8 @@
     padding: 10px 0 10px 0;
     border: 1px solid #818181;
     border-radius: 10px;
+
+    box-shadow: 0px 0px 5px 2px #1b1b1b22;
 }
 
 .book img {
