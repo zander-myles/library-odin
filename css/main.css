@@ -10,7 +10,7 @@
 }
 
 .form-container {
-    visibility: visible;
+    visibility: hidden;
 
     display: flex;
     justify-content: center;
