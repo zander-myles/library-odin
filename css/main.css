@@ -9,6 +9,54 @@
     color: #1b1b1b;
 }
 
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    position: relative;
+
+    width: 25vw;
+    padding: 10px 0 10px 0;
+    border: 1px solid #818181;
+    border-radius: 10px;
+}
+
+.book img {
+    top: 0;
+    right: 5px;
+}
+
+.book > header {
+    font-size: 32px;
+    text-align: center;
+}
+
+.book-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.book p {
+    font-size: 24px;
+}
+
+.book button {
+    font-size: 24px;
+}
+
+.book .delete-button {
+    align-self: center;
+}
+
 body > header {
     text-align: center;
     font-size: 40px;
@@ -73,7 +121,7 @@ form > header {
     font-size: 40px;
 }
 
-form img {
+.exit-button {
     position: absolute;
     top: 10px;
     right: 10px;
