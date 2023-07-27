@@ -1,19 +1,17 @@
 const newButton = document.querySelector(".new-button");
 const formContainer = document.querySelector(".form-container");
+const form = document.querySelector("form");
 const exitButton = document.querySelector(".exit-button");
 
 newButton.addEventListener("click", () => {
-    if (formContainer.style.visibility === "hidden") {
-        formContainer.style.visibility = "visible";
-    } else {
-        formContainer.style.visibility = "hidden";
-    }
+    formContainer.style.visibility = "visible";
 })
 
 exitButton.addEventListener("click", () => {
-    if (formContainer.style.visibility === "hidden") {
-        formContainer.style.visibility = "visible";
-    } else {
-        formContainer.style.visibility = "hidden";
-    }
+    formContainer.style.visibility = "hidden";
+})
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    formContainer.style.visibility = "hidden";
 })
