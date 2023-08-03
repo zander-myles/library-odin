@@ -44,4 +44,5 @@ form.addEventListener("submit", (event) => {
     formContainer.style.visibility = "hidden";
     let book = new Book(titleInput.value, authorInput.value, pagesInput.value, genreInput.value, statusInput.value);
     library.push(book);
+    form.reset();
 })
