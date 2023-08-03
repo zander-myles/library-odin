@@ -1,4 +1,33 @@
-let library = [];
+let library = [
+{
+    title: "A Trip to Vietnam",
+    author: "Zander Sacay",
+    pages: 456,
+    genre: "Action",
+    status: "Completed"
+},
+{
+    title: "Welcome Home",
+    author: "Wawa Cat",
+    pages: 789,
+    genre: "Romance",
+    status: "Not Completed"
+}];
+
+const newButton = document.querySelector(".new-button");
+const formContainer = document.querySelector(".form-container");
+const bookTitle = document.querySelectorAll("header.title");
+const bookInfoSection = document.querySelector(".book-info-section");
+const exitButton = document.querySelector(".exit-button");
+const closeBookButton = document.querySelector(".open-button");
+const bookshelf = document.querySelector(".bookshelf");
+
+const form = document.querySelector("form");
+const authorInput = document.querySelector("input[id=author]");
+const titleInput = document.querySelector("input[id=title]");
+const pagesInput = document.querySelector("input[id=pages]");
+const genreInput = document.querySelector("select[id=genre]");
+const statusInput = document.querySelector("input[id=status]");
 
 function Book(title, author, pages, genre, status) {
     this.title = title;
@@ -85,20 +114,7 @@ for (let i=0; i<library.length; i++) {
     displayBook(library[i]);
 }
 
-const newButton = document.querySelector(".new-button");
-const formContainer = document.querySelector(".form-container");
-const bookTitle = document.querySelectorAll("header.title");
-const bookInfoSection = document.querySelector(".book-info-section");
-const exitButton = document.querySelector(".exit-button");
-const closeBookButton = document.querySelector(".open-button");
-const bookshelf = document.querySelector(".bookshelf");
 
-const form = document.querySelector("form");
-const authorInput = document.querySelector("input[id=author]");
-const titleInput = document.querySelector("input[id=title]");
-const pagesInput = document.querySelector("input[id=pages]");
-const genreInput = document.querySelector("select[id=genre]");
-const statusInput = document.querySelector("input[id=status]");
 
 newButton.addEventListener("click", () => {
     formContainer.style.visibility = "visible";
