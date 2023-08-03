@@ -57,7 +57,8 @@ function displayBook(book) {
     })
     section.appendChild(openBtn);
     let bookInfoSectionDiv = document.createElement("div");
-    bookInfoSectionDiv.className = "book-info-section";
+    bookInfoSectionDiv.classList.add("book-info-section");
+    bookInfoSectionDiv.classList.add("open");
     section.appendChild(bookInfoSectionDiv);
     let infoContainer1 = document.createElement("div");
     infoContainer1.className = "info-container";
