@@ -15,6 +15,7 @@ let library = [
 }];
 
 const sortButton = document.querySelector("select[id=sort]");
+const orderButton = document.querySelector(".order-button");
 const newButton = document.querySelector(".new-button");
 const formContainer = document.querySelector(".form-container");
 const bookTitle = document.querySelectorAll("header.title");
@@ -146,6 +147,9 @@ function sortLibrary(type) {
             sortedArray.push(library[i].title);
         }
         sortedArray.sort();
+        if (orderButton.classList.contains("descending")) {
+            sortedArray.reverse();
+        }
         for (let i=0; i<sortedArray.length; i++) {
             for (let j=0; j<library.length; j++) {
                 if (library[j].title === sortedArray[i]) {
@@ -165,6 +169,9 @@ function sortLibrary(type) {
             sortedArray.push(library[i].author);
         }
         sortedArray.sort();
+        if (orderButton.classList.contains("descending")) {
+            sortedArray.reverse();
+        }
         for (let i=0; i<sortedArray.length; i++) {
             for (let j=0; j<library.length; j++) {
                 if (library[j].author === sortedArray[i]) {
@@ -184,6 +191,9 @@ function sortLibrary(type) {
             sortedArray.push(library[i].pages);
         }
         sortedArray.sort();
+        if (orderButton.classList.contains("descending")) {
+            sortedArray.reverse();
+        }
         for (let i=0; i<sortedArray.length; i++) {
             for (let j=0; j<library.length; j++) {
                 if (library[j].pages === sortedArray[i]) {
@@ -203,6 +213,9 @@ function sortLibrary(type) {
             sortedArray.push(library[i].genre);
         }
         sortedArray.sort();
+        if (orderButton.classList.contains("descending")) {
+            sortedArray.reverse();
+        }
         for (let i=0; i<sortedArray.length; i++) {
             for (let j=0; j<library.length; j++) {
                 if (library[j].genre === sortedArray[i]) {
@@ -219,6 +232,16 @@ function sortLibrary(type) {
 }
 
 sortButton.addEventListener("change", ()=>{
+    sortLibrary(sortButton.value);
+})
+
+orderButton.addEventListener("click", ()=>{
+    orderButton.classList.toggle("descending");
+    if (orderButton.classList.contains("descending")) {
+        orderButton.style.transform = "rotate(180deg)";
+    } else {
+        orderButton.style.transform = "";
+    }
     sortLibrary(sortButton.value);
 })
 

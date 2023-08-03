@@ -18,6 +18,10 @@ body {
     height: 100%;
 }
 
+.order-button {
+    transition: .3s;
+}
+
 .bookshelf {
     display: flex;
     flex-wrap: wrap;
