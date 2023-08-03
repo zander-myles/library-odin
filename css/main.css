@@ -9,6 +9,10 @@
     color: #1b1b1b;
 }
 
+html {
+    width: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -54,6 +58,14 @@ body {
     right: 5px;
 
     width: 30px;
+
+    opacity: .5;
+
+    transition: .3s;
+}
+
+.book img:hover {
+    opacity: 1;
 }
 
 .book > header {
@@ -81,8 +93,25 @@ body {
     font-size: 24px;
 }
 
-.book .delete-button {
+.delete-button {
     align-self: center;
+
+    width: 30%;
+    border-radius: 5px;
+
+    background-color: rgb(255, 126, 126);
+    opacity: 0.4;
+    color: white;
+
+    transition: .3s;
+}
+
+.delete-button:hover {
+    opacity: 0.7;
+}
+
+.delete-button:active {
+    opacity: 1;
 }
 
 body > header {
@@ -111,6 +140,14 @@ body > header {
 
 .bookshelf-buttons img {
     height: 3vh;
+
+    opacity: .5;
+
+    transition: .3s;
+}
+
+.bookshelf-buttons img:hover {
+    opacity: 1;
 }
 
 .form-container {
