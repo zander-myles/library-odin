@@ -108,7 +108,7 @@ function displayBook(book) {
     deleteBtn.textContent = "Delete";
     deleteBtn.addEventListener("click", ()=>{
         for (let i=0; i<library.length; i++) {
-            if (library[i].title = bkTitle.textContent) {
+            if (library[i].title === bkTitle.textContent) {
                 library.splice(i, 1);
             }
         }
