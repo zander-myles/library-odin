@@ -190,7 +190,7 @@ function sortLibrary(type) {
         for (let i=0; i<library.length; i++) {
             sortedArray.push(library[i].pages);
         }
-        sortedArray.sort();
+        sortedArray.sort((a,b) => (a-b));
         if (orderButton.classList.contains("descending")) {
             sortedArray.reverse();
         }
