@@ -42,4 +42,6 @@ closeBookButton.addEventListener("click", ()=>{
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     formContainer.style.visibility = "hidden";
+    let book = new Book(titleInput.value, authorInput.value, pagesInput.value, genreInput.value, statusInput.value);
+    library.push(book);
 })
