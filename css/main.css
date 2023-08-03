@@ -11,6 +11,8 @@
 
 html {
     width: 100%;
+
+    overflow-x: hidden;
 }
 
 body {
@@ -91,6 +93,10 @@ body {
 
 .book button {
     font-size: 24px;
+
+    padding: 0 10px 0 10px;
+
+    border-radius: 5px;
 }
 
 .delete-button {
@@ -125,13 +131,14 @@ body > header {
 }
 
 .bookshelf-buttons {
+    box-sizing: border-box;
     display: flex;
     gap: 10px;
     align-items: center;
 
     height: 3vh;
     width: 100%;
-    padding: 1vh 0 1vh 3vw;
+    padding-left: 2vw;
 }
 
 .bookshelf-buttons select, .bookshelf-buttons label {
