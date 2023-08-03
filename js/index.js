@@ -106,6 +106,9 @@ function displayBook(book) {
     let deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-button";
     deleteBtn.textContent = "Delete";
+    deleteBtn.addEventListener("click", ()=>{
+        bookshelf.removeChild(section);
+    })
     bookInfoSectionDiv.appendChild(deleteBtn);
     bookshelf.appendChild(section);
 }
