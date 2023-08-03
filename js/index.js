@@ -100,9 +100,16 @@ function displayBook(book) {
     label7.className = "status-label";
     label7.textContent = "Status:";
     infoContainer4.appendChild(label7);
-    let label8 = document.createElement("p");
+    let label8 = document.createElement("button");
     label8.className = "status-text";
     label8.textContent = book.status;
+    label8.addEventListener("click", ()=>{
+        if (label8.textContent === "Completed") {
+            label8.textContent = "Not Completed";
+        } else {
+            label8.textContent = "Completed";
+        }
+    })
     infoContainer4.appendChild(label8);
     let deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-button";
