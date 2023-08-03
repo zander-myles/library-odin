@@ -126,11 +126,11 @@ function displayBook(book) {
     bookshelf.appendChild(section);
 }
 
-for (let i=0; i<library.length; i++) {
-    displayBook(library[i]);
+function displayLibrary() {
+    for (let i=0; i<library.length; i++) {
+        displayBook(library[i]);
+    }
 }
-
-
 
 newButton.addEventListener("click", () => {
     formContainer.style.visibility = "visible";
@@ -153,3 +153,5 @@ form.addEventListener("submit", (event) => {
     form.reset();
     displayBook(library[library.length - 1]);
 })
+
+displayLibrary();
