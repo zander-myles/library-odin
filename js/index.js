@@ -14,6 +14,7 @@ let library = [
     status: "Not Completed"
 }];
 
+const sortButton = document.querySelector("select[id=sort]");
 const newButton = document.querySelector(".new-button");
 const formContainer = document.querySelector(".form-container");
 const bookTitle = document.querySelectorAll("header.title");
@@ -127,10 +128,99 @@ function displayBook(book) {
 }
 
 function displayLibrary() {
+    let books = document.querySelectorAll(".book");
+    books.forEach(book => {bookshelf.removeChild(book)});
     for (let i=0; i<library.length; i++) {
         displayBook(library[i]);
     }
 }
+
+let sortedArray = [];
+let tempLibrary = [];
+
+function sortLibrary(type) {
+    if (type === "title") {
+        sortedArray = [];
+        tempLibrary = [];
+        for (let i=0; i<library.length; i++) {
+            sortedArray.push(library[i].title);
+        }
+        sortedArray.sort();
+        for (let i=0; i<sortedArray.length; i++) {
+            for (let j=0; j<library.length; j++) {
+                if (library[j].title === sortedArray[i]) {
+                    tempLibrary.push(library[j]);
+                    library.splice(j, 1);
+                }
+            }
+        }
+        for (let i=0; i<tempLibrary.length; i++) {
+            library.push(tempLibrary[i]);
+        }
+    }
+    else if (type === "author") {
+        sortedArray = [];
+        tempLibrary = [];
+        for (let i=0; i<library.length; i++) {
+            sortedArray.push(library[i].author);
+        }
+        sortedArray.sort();
+        for (let i=0; i<sortedArray.length; i++) {
+            for (let j=0; j<library.length; j++) {
+                if (library[j].author === sortedArray[i]) {
+                    tempLibrary.push(library[j]);
+                    library.splice(j, 1);
+                }
+            }
+        }
+        for (let i=0; i<tempLibrary.length; i++) {
+            library.push(tempLibrary[i]);
+        }
+    }
+    else if (type === "pages") {
+        sortedArray = [];
+        tempLibrary = [];
+        for (let i=0; i<library.length; i++) {
+            sortedArray.push(library[i].pages);
+        }
+        sortedArray.sort();
+        for (let i=0; i<sortedArray.length; i++) {
+            for (let j=0; j<library.length; j++) {
+                if (library[j].pages === sortedArray[i]) {
+                    tempLibrary.push(library[j]);
+                    library.splice(j, 1);
+                }
+            }
+        }
+        for (let i=0; i<tempLibrary.length; i++) {
+            library.push(tempLibrary[i]);
+        }
+    }
+    else if (type === "genre") {
+        sortedArray = [];
+        tempLibrary = [];
+        for (let i=0; i<library.length; i++) {
+            sortedArray.push(library[i].genre);
+        }
+        sortedArray.sort();
+        for (let i=0; i<sortedArray.length; i++) {
+            for (let j=0; j<library.length; j++) {
+                if (library[j].genre === sortedArray[i]) {
+                    tempLibrary.push(library[j]);
+                    library.splice(j, 1);
+                }
+            }
+        }
+        for (let i=0; i<tempLibrary.length; i++) {
+            library.push(tempLibrary[i]);
+        }
+    }
+    displayLibrary();
+}
+
+sortButton.addEventListener("change", ()=>{
+    sortLibrary(sortButton.value);
+})
 
 newButton.addEventListener("click", () => {
     formContainer.style.visibility = "visible";
