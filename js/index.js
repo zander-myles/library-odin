@@ -1,4 +1,5 @@
 let library = [];
+
 function Book(title, author, pages, genre, status) {
     this.title = title;
     this.author = author;
@@ -11,9 +12,15 @@ const newButton = document.querySelector(".new-button");
 const formContainer = document.querySelector(".form-container");
 const bookTitle = document.querySelectorAll("header.title");
 const bookInfoSection = document.querySelector(".book-info-section");
-const form = document.querySelector("form");
 const exitButton = document.querySelector(".exit-button");
 const closeBookButton = document.querySelector(".open-button");
+
+const form = document.querySelector("form");
+const authorInput = document.querySelector("input[id=author]");
+const titleInput = document.querySelector("input[id=title]");
+const pagesInput = document.querySelector("input[id=pages]");
+const genreInput = document.querySelector("select[id=genre]");
+const statusInput = document.querySelector("input[id=status]");
 
 newButton.addEventListener("click", () => {
     formContainer.style.visibility = "visible";
